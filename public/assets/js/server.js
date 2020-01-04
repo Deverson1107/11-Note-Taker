@@ -1,3 +1,4 @@
+//All initial server set up items.
 var express = require("express");
 var path = require("path");
 
@@ -11,10 +12,18 @@ app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
 
+//Routes to various pages.
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../../index.html"));
 });
 app.get("/notes", function(req, res) {
     res.sendFile(path.join(__dirname, "../../notes.html"));
   });
+
+app.get("/api/notes", function(req, res) {
+    res.sendFile(path.join(__dirname, "../../../db/db.json"));
+});
+
+
+
 
