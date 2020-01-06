@@ -1,1 +1,1 @@
-web: node server.js
+web: node/public/assets/js/server.js
