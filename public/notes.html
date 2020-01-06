@@ -39,21 +39,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/assets/js/index.js"></script>
 </body>
-
-<script type="text/javascript">
-  $(".save-note").on("click", function(event) {
-    event.preventDefault();
-    var newNote = {
-      name: $(".note-title").val().trim(),
-      phoneNum: $(".note-textarea").val().trim(),
-    };
-
-    $.post("/api/notes", newNote)
-      .then(function(data) {
-        console.log("notes.html", data);
-        alert("Adding new note to database.");
-      });
-  });
-</script>
-
 </html>
